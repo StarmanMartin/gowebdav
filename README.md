@@ -2,6 +2,8 @@
 
 originally forged from /github.com/studio-b12/gowebdav
 
+Added http.Transport to the client object.
+
 [![Build Status](https://travis-ci.org/studio-b12/gowebdav.svg?branch=master)](https://travis-ci.org/studio-b12/gowebdav)
 [![Go Report Card](https://goreportcard.com/badge/github.com/studio-b12/gowebdav)](https://goreportcard.com/report/github.com/studio-b12/gowebdav)
 
@@ -10,7 +12,7 @@ A WebDAV client and library for golang.
 ## Install
 
 ```sh
-go get -u github.com/studio-b12/gowebdav/cmd/gowebdav
+go get -u github.com/StarmanMartin/gowebdav
 ```
 
 ## Usage
@@ -76,7 +78,7 @@ Package gowebdav A golang WebDAV library
 * [func PathEscape(path string) string](#PathEscape)
 * [func String(r io.Reader) string](#String)
 * [type Client](#Client)
-  * [func NewClient(uri, user, pw string) *Client](#NewClient)
+  * [func NewClient(uri, user, pw string, tr *http.Transport) *Client](#NewClient)
   * [func (c *Client) Connect() error](#Client.Connect)
   * [func (c *Client) Copy(oldpath, newpath string, overwrite bool) error](#Client.Copy)
   * [func (c *Client) Mkdir(path string, _ os.FileMode) error](#Client.Mkdir)
